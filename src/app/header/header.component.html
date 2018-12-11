@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navabar-header">
+      <a routerLink="/" class="navbar-brand" style="color:white;">“ The Table”</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="/recipes" onMouseOver="this.style.color='#006118'" onMouseOut="this.style.color='grey'">
+            Dishes </a> </li>
+        <li routerLinkActive="active"><a routerLink="/shopping-list" onMouseOver="this.style.color='#006118'"
+            onMouseOut="this.style.color='grey'">
+            Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a style="cursor:pointer" class="dropdown-toggle" role="button">manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor:pointer">save data</a></li>
+            <li><a style="cursor:pointer">fetching data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
