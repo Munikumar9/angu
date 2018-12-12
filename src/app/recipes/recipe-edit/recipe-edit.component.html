@@ -3,7 +3,7 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-success" style="margin:3px;"  [disabled]="!recipeForm.valid">Save</button>
+          <button type="submit" class="btn btn-success" style="margin:3px;" [disabled]="!recipeForm.valid">Save</button>
           <button type="button" class="btn btn-danger" style="margin:3px;">Cancel</button>
         </div>
       </div>
@@ -18,21 +18,21 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="ImagePath">Image URL</label>
-            <input type="text" id="ImagePath" formControlName="Imagepath" class="form-control">
+            <label for="imagePath">Image URL</label>
+            <input type="text" id="imagePath" formControlName="imagePath" class="form-control">
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <img src="" class="img-responsive">
+          <img src=""  class="img-responsive">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="Descripitio ">Descripition</label>
-            <textarea type="text" id="Descripition" formControlName="Descripition" class="form-control" rows="6"></textarea>
+            <label for="description">Descripition</label>
+            <textarea type="text" id="description" formControlName="description" class="form-control" rows="6"></textarea>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
           <br>
           <div class="row">
             <div class="col-xs-12">
-              <button  type="button" class="btn btn-success" (click)="onAddIngredient()"> Add ingredients</button>
+              <button type="button" class="btn btn-success" (click)="onAddIngredient()"> Add ingredients</button>
             </div>
           </div>
         </div>

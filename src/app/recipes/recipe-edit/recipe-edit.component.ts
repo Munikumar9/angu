@@ -44,7 +44,7 @@ export class RecipeEditComponent implements OnInit {
       new FormGroup({
         'name': new FormControl(null, Validators.required),
         'amount': new FormControl(null, [
-          , Validators.required,
+          Validators.required,
           Validators.pattern(/^[1-9]+[0-9]*$/)
         ])
       })
@@ -53,14 +53,14 @@ export class RecipeEditComponent implements OnInit {
 
   private initform() {
     let recipeName = '';
-    let recipeImagepath = '';
+    let recipeImagePath = '';
     let recipeDescripition = '';
     let recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
       const recipe = this.recipeservice.getrecipe(this.id)
       recipeName = recipe.name;
-      recipeImagepath = recipe.imagePath;
+      recipeImagePath = recipe.imagePath;
       recipeDescripition = recipe.description;
       if (recipe['ingredients']) {
         for (let ingredient of recipe.ingredients) {
@@ -80,8 +80,8 @@ export class RecipeEditComponent implements OnInit {
 
     this.recipeForm = new FormGroup({
       'name': new FormControl(recipeName, Validators.required),
-      'Imagepath': new FormControl(recipeImagepath, Validators.required),
-      'Descripition': new FormControl(recipeDescripition, Validators.required),
+      'imagePath': new FormControl(recipeImagePath, Validators.required),
+      'description': new FormControl(recipeDescripition, Validators.required),
       'ingredients': recipeIngredients
     });
   }
