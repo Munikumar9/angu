@@ -18,6 +18,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { AppRoutingModule } from './app-routing.module';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './recipes/recipe.service';
+import { DataStorageService } from './shared/data-storage.service';
 
 
 
@@ -44,7 +45,7 @@ import { RecipeService } from './recipes/recipe.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService,DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
