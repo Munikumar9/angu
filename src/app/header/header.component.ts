@@ -18,12 +18,12 @@ export class HeaderComponent implements OnInit {
     this.dataStorageService.storeRecipes()
       .subscribe(
         (response: Response) => {
-          console.log(response); 
+          console.log(response);
         }
       );
   }
 
-  onFetchData(){
+  onFetchData() {
     this.dataStorageService.getRecipes();
   }
 
